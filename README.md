@@ -1,6 +1,3 @@
-Here's your **README.md** file:  
-
-```markdown
 # Hologram With Speech Synthesis  
 
 ## 📌 Project Overview  
@@ -43,7 +40,7 @@ API_KEY=your_openai_api_key_here
 python main.py
 ```
 
-## 🏗️ Project Structure  
+## 🏰 Project Structure  
 ```
 HologramWithSpeechSynthesis/
 │── assets/                   # Contains video files (hologram.mp4)
@@ -66,6 +63,6 @@ HologramWithSpeechSynthesis/
 ## 🤝 Contributing  
 Pull requests are welcome! If you’d like to contribute, fork the repo and create a new branch.  
 
-## 📬 Contact  
+## 💌 Contact  
 For any questions, reach out via [GitHub Issues](https://github.com/idris10215/Hologram-SpeechSynthesis/issues).  
-```
+
