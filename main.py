@@ -143,7 +143,7 @@ if __name__ == '__main__':
     assistant_thread.start()
 
     # Play the video file in the main thread (or another separate thread if needed)
-    video_path = "C:\\Users\\moham\\OneDrive\\Desktop\\AI assistant\\HologramWithSpeechSynthesis\\hologram.mp4"  # Replace with the actual video file path
+    video_path = "C:\\Users\\moham\\OneDrive\\Desktop\\AI assistant\\HologramWithSpeechSynthesis\\assets\\hologram.mp4"  # Replace with the actual video file path
     play_video(video_path)
 
 
