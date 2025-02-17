@@ -9,6 +9,7 @@ import cv2  # OpenCV for video plyback
 import screeninfo  # To get screen resolution
 from dotenv import load_dotenv
 import os
+import datetime
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -76,23 +77,39 @@ def takeCommand():
         finally:
             listening_event.clear()  # Resume video playback after listening
 
+
+def get_greeting():
+    hour = datetime.datetime.now().hour
+    if hour < 12:
+        return "Good morning!"
+    elif 12 <= hour < 18:
+        return "Good afternoon!"
+    else:
+        return "Good evening!"
+
+
 def mainfunc():
     global running
     while running:
         queries = takeCommand()
         for query in queries:
             if query.strip():
-                if query.strip().lower() in ["quit", "exit", "stop", "shutdown", "bye", "ok bye", "thank you", "ok quit", "ok exit", "ok stop", "ok shutdown", "see you again bye","ok jarvis bye","jarvis bye","bye jarvis","stop jarvis","thank you jarvis bye","see you again","jarvis see you again bye"]:
+                if query.strip().lower() in ["quit", "exit", "stop", "shutdown", "bye", "ok bye", "thank you", "ok quit", "ok exit", "ok stop", "ok shutdown", "see you again bye","ok jarvis bye","jarvis bye","bye jarvis","stop jarvis","thank you jarvis","see you again","jarvis see you again bye"]:
                     print("Exiting...")
                     say("Thank You...Shutting down. Good bye!")
                     running = False
                     return
-                elif query.strip().lower() in[ "what is your name","tell me your name","what is name","your name please","name please","name yourself","what name","is your name","who are you","hu r u"]:
-                    print("My Name is Jarvis. I am an A I assistant created by Team IPR 19. How can i assist you.")
-                    say("My Name is Jarvis. I am an A I assistant created by Team IPR 19. How can i assist you.")
-                elif query.strip().lower() in[ "Hi jarvis","hello jarvis"]:
+                elif query.strip().lower() in["Who are you", "what is your name","tell me your name","your name please","name please","name yourself","who are you", "hu r u"]:
+                    print("I am Jarvis. I am an A I assistant created by Idris. How can i assist you.")
+                    say("My Name is Jarvis. I am an A I assistant created by Idris. How can i assist you.")
+                elif query.strip().lower() in[ "Hi jarvis","hello jarvis","jarvis"]:
                     print("Hi there, How can i help you")
                     say("Hi there, How can i help you")
+                elif query.strip().lower() in ["what time is it", "tell me the time", "current time", "time please"]:
+                    current_time = datetime.datetime.now().strftime("%I:%M %p")
+                    response = f"The time is {current_time}."
+                    print(response)
+                    say(response)
                 else:
                     ai_response = chat(query.strip())
                     print(f"Assistant: {ai_response}")
