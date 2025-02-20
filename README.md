@@ -10,6 +10,12 @@ This project is an AI-powered **Hologram Assistant** that combines **speech reco
 - 📺 **Hologram Video Display:** Plays a looping hologram video with `OpenCV`  
 - 🧠 **Multi-threaded Execution:** Runs speech processing and video playback simultaneously  
 
+## 🎥 Demo  
+
+Check out the Hologram with Speech Synthesis in action!  
+
+[Watch Local Demo](assets/demo.mp4)  
+
 ## 🚀 Installation & Setup  
 
 ### **1️⃣ Clone the Repository**  
