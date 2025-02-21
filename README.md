@@ -6,7 +6,7 @@ This project is an AI-powered **Hologram Assistant** that combines **speech reco
 ## ✨ Features  
 - 🎤 **Speech Recognition:** Listens to user queries using `speech_recognition`  
 - 🗣️ **Text-to-Speech:** Converts AI-generated responses into speech with `pyttsx3`  
-- 🤖 **AI-Powered Responses:** Uses OpenAI’s API for intelligent replies  
+- 🤖 **AI-Powered Responses:** Uses OpenAI’s API for intelligent replies 
 - 📺 **Hologram Video Display:** Plays a looping hologram video with `OpenCV`  
 - 🧠 **Multi-threaded Execution:** Runs speech processing and video playback simultaneously  
 
